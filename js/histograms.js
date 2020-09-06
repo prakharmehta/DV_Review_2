@@ -290,7 +290,7 @@ class HistogramView {
         .attr("text-anchor", "middle")
         .attr('alignment-baseline', 'baseline')
         .text(Utils.formatKeyLabel(_this.dimensions[i]))
-        .call(addHelpTooltip(_this.dimensions[i].toLowerCase()))
+        // .call(addHelpTooltip(_this.dimensions[i].toLowerCase()))
         .transition(d3.transition().duration(750))
         .attr('transform', 'translate(' + centerPx + ',' + parseInt(range[0]+15) + ')');
 
@@ -344,29 +344,6 @@ class HistogramView {
               // callTutorial('#hist0', 'You can also filter songs by attributes<br>by brushing over these histograms.', 'w')
             }
           })
-          .on("mousedown", function(d) {
-            // console.log('mousedown')
-            // let brush_elm = _this.svg.select(".brush").node();
-            // let new_click_event = new Event('mousedown');
-            // new_click_event.pageX = d3.event.pageX;
-            // new_click_event.clientX = d3.event.clientX;
-            // new_click_event.pageY = d3.event.pageY;
-            // new_click_event.clientY = d3.event.clientY;
-            // brush_elm.dispatchEvent(new_click_event);
-
-            var e = _this.brush.extent(),
-                m = d3.mouse(_this.svg.node()),
-                p = [_this.xAxis.invert(m[0]), _this.y.invert(m[1])];
-            
-            if ( _this.brush.empty() || 
-                (e[0][0] > d[0] || d[0] > e[1][0]
-                || e[0][1] > d[1] || d[1] > e[1][1] )   
-            ) {
-              _this.brush.extent([p,p]);
-            } else {
-              d3.select(this).classed('extent', true);
-            }
-          })
           .on("mouseout", (d) => {
             if (!_this.isBrushing) {
                 _this.dispatch.call('highlight', this, k => true);
@@ -384,64 +361,6 @@ class HistogramView {
 
     // exit
     rectangles.exit().remove();
-
-    // histogramGEnter
-    //     .call(this.brush)
-    //     .select('.overlay')
-    //     .on('mouseover.passThru', function (d) {
-    //         // console.log('asdsd')
-    //         // console.log(e);
-    //         var e = d3.event;
-
-    //         var prev = this.style.pointerEvents;
-    //         this.style.pointerEvents = 'none';
-
-    //         var el = document.elementsFromPoint(d3.event.x, d3.event.y);
-    //         let elBinRect = el.filter(d => d.classList.contains('bin-rect'));
-    //         console.log(this, elBinRect);
-    //         if (elBinRect.length > 0) {
-    //           var e2 = document.createEvent('MouseEvent');
-    //           e2.initMouseEvent(e.type,e.bubbles,e.cancelable,e.view, e.detail,e.screenX,e.screenY,e.clientX,e.clientY,e.ctrlKey,e.altKey,e.shiftKey,e.metaKey,e.button,e.relatedTarget);
-
-    //           elBinRect[0].dispatchEvent(e2);
-    //         }
-
-    //         this.style.pointerEvents = prev;
-    //     })
-    //     .on('mousemove.passThru', function (d) {
-    //       // console.log('asdsd')
-    //       // console.log(e);
-    //       var e = d3.event;
-
-    //       var prev = this.style.pointerEvents;
-    //       this.style.pointerEvents = 'none';
-
-    //       var el = document.elementsFromPoint(d3.event.x, d3.event.y);
-    //       let elBinRect = el.filter(d => d.classList.contains('bin-rect'));
-          
-    //       if (elBinRect.length > 0) {
-    //         var e2 = document.createEvent('MouseEvent');
-    //         // console.log(e.type);
-    //         e2.initMouseEvent('mouseover',e.bubbles,e.cancelable,e.view, e.detail,e.screenX,e.screenY,e.clientX,e.clientY,e.ctrlKey,e.altKey,e.shiftKey,e.metaKey,e.button,e.relatedTarget);
-
-    //         elBinRect[0].dispatchEvent(e2);
-    //       }
-
-    //       this.style.pointerEvents = prev;
-    //   });
-
-
-
-      // .style("opacity", .2)
-
-    // Create axis and their labels
-
-
-        //console.log(parseInt((range[0] - range[1])/2)+range[1]);
-    // this.svg.append('text')
-    //     .attr('class', 'y_label')
-    //     .attr("transform","translate(20," + (parseInt((range[0] - range[1])/2)+range[1]+22) + ")rotate(270)")
-    //     .text('Count');
   }
 
   redraw() {
@@ -575,7 +494,7 @@ class HistogramView {
         .attr("text-anchor", "middle")
         .attr('alignment-baseline', 'baseline')
         .text(Utils.formatKeyLabel(_this.dimensions[i]))
-        .call(addHelpTooltip(_this.dimensions[i].toLowerCase()))
+        // .call(addHelpTooltip(_this.dimensions[i].toLowerCase()))
         .attr('transform', 'translate(' + centerPx + ',' + parseInt(range[0]+15) + ')');
 
           }

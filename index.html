@@ -37,7 +37,7 @@
 
       gtag("config", "UA-154213807-1");
     </script>
-<!-- 
+    <!-- 
     <meta property="og:title" content="VINYL" />
     <meta
       property="og:description"
@@ -50,7 +50,7 @@
     />
     <meta name="twitter:card" content="summary_large_image" /> -->
   </head>
-  <body style="background-image: url(bg.png); overflow-x:hidden;">
+  <body style="background-image: url(bg.png); overflow-x: hidden">
     <!-- TODO remove inline CSS -->
     <!-- <div id="tutorial-landing" class="overlay-popup full-page">
 			<img src="img/tutorial_landing.png" style="width: 60%; max-width: 800px;">
@@ -90,17 +90,25 @@
           </div>
         </div>
         <div class="collapse-sm">
-          <div class="container-column" style="margin:auto;">
-						<div class="cell panel dont-reset-selection" id="options-panel" style="visibility: hidden";  >
-
-							<div class="mb-xs" >
-								<div class="margin-gutter" >
-									<div class="mb-xxs">
-										
-									</div>
-									<input type="text" class="btn vis-control" id="search-highlight" style="width: 100%;" style="visibility: hidden;">
-								</div>
-							</div>
+          <div class="container-column" style="margin: auto">
+            <div
+              class="cell panel dont-reset-selection"
+              id="options-panel"
+              style="visibility: hidden"
+              ;
+            >
+              <div class="mb-xs">
+                <div class="margin-gutter">
+                  <div class="mb-xxs"></div>
+                  <input
+                    type="text"
+                    class="btn vis-control"
+                    id="search-highlight"
+                    style="width: 100%"
+                    style="visibility: hidden"
+                  />
+                </div>
+              </div>
 
               <!-- </div> -->
               <!-- <div class="container-row">
@@ -115,43 +123,55 @@
 							</div>
 						</div> -->
               <!-- <div class="container-col"> -->
-                <div class="grow container-row mb-xs">
-                  <div class="grow">
-                    
-                  </div>
-                  <label class="switch vis-control">
-                    <input type="checkbox" id="toggle-pca" class="vis-control" style="visibility: hidden; ">
-                    <span class="slider round" style="visibility: hidden"></span>
-                  </label>
-                </div>
+              <div class="grow container-row mb-xs">
+                <div class="grow"></div>
+                <label class="switch vis-control">
+                  <input
+                    type="checkbox"
+                    id="toggle-pca"
+                    class="vis-control"
+                    style="visibility: hidden"
+                  />
+                  <span class="slider round" style="visibility: hidden"></span>
+                </label>
+              </div>
 
-                <div class="container-row mb-xs">
-                  <div class="grow">
-                    
-                  </div>
-                  <label class="switch vis-control">
-                    <input type="checkbox" id="toggle-split-view" class="vis-control" style="visibility: hidden;">
-                    <span class="slider round" ></span>
-                  </label>
-                </div>
-                <div class="container-row mb-xs">
-                  <div class="grow">
-                    
-                  </div>
-                  <label class="switch vis-control">
-                    <input type="checkbox" id="toggle-album-art" class="vis-control" style="visibility: hidden;">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
-                <div class="container-row mb-xs">
-                  <div class="grow">
-                    
-                  </div>
-                  <label class="switch vis-control">
-                    <input type="checkbox" id="toggle-force" class="vis-control" style="visibility: hidden;">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
+              <div class="container-row mb-xs">
+                <div class="grow"></div>
+                <label class="switch vis-control">
+                  <input
+                    type="checkbox"
+                    id="toggle-split-view"
+                    class="vis-control"
+                    style="visibility: hidden"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="container-row mb-xs">
+                <div class="grow"></div>
+                <label class="switch vis-control">
+                  <input
+                    type="checkbox"
+                    id="toggle-album-art"
+                    class="vis-control"
+                    style="visibility: hidden"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="container-row mb-xs">
+                <div class="grow"></div>
+                <label class="switch vis-control">
+                  <input
+                    type="checkbox"
+                    id="toggle-force"
+                    class="vis-control"
+                    style="visibility: hidden"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
               <div class="container-row mb-xs">
                 <button
                   class="btn btn-block clickable"
@@ -163,7 +183,6 @@
             </div>
           </div>
           <!-- <h2>About the Data</h2> -->
-         
         </div>
       </div>
       <div class="cell grow container-col central-column">
@@ -171,7 +190,11 @@
           id="vis-area"
           class="cell grow container-col container-col-rev-sm anti-cell-sm"
         >
-          <div class="container-row" id="select-axes" style="margin-top: -400px; margin-left: 50%; width: 50%;" >
+          <div
+            class="container-row"
+            id="select-axes"
+            style="margin-top: -400px; margin-left: 50%; width: 50%"
+          >
             <!-- <div class="cell grow mb-xs" style="margin-bottom: 10px;">
 							<div>
 								<small class="nowrap">Position data points by</small>
@@ -187,237 +210,15 @@
 								</div>
 							</div>
 						</div> -->
-            <div class="cell grow" style="margin-left:53%; margin-top:0;">
-              <div class="margin-gutter">
-                <div>
-                  <small class="nowrap">X Axis</small>
-                </div>
-                <select
-                  name="select-x-axis"
-                  class="btn active vis-control"
-                  id="select-x-axis"
-                  style="width: 90%;"
-                >
-                  <option
-                    data-scale-type="linear"
-                    value="select"
-                    data-radial="true"
-                    selected="selected"
-                  >
-                    Select
-                  </option>
-                  <!-- <option data-scale-type="linear" value="key_signature_by_fifths" data-radial="true">KEY (Ordered by Circle of Fifths)</option> -->
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="100"
-                    value="popularity"
-                  >
-                    POPULARITY
-                  </option>
-                  <option data-scale-type="linear" value="release_year">
-                    YEAR
-                  </option>
-                  <option data-scale-type="linear" value="loudness">
-                    LOUDNESS
-                  </option>
-                  <option data-scale-type="linear" value="duration">
-                    DURATION
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    value="tempo"
-                    selected="selected"
-                  >
-                    TEMPO
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="energy"
-                  >
-                    ENERGY
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="danceability"
-                  >
-                    DANCEABILITY
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="valence"
-                  >
-                    POSITIVENESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="acousticness"
-                  >
-                    ACOUSTICNESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="liveness"
-                  >
-                    LIVENESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="instrumentalness"
-                  >
-                    INSTRUMENTALNESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="speechiness"
-                  >
-                    SPEECHINESS
-                  </option>
-                  <!-- <option data-scale-type="linear" value="pca1">PCA1</option>	 -->
-                </select>
-              </div>
-            </div>
-            <div class="cell grow">
-              <div class="margin-gutter">
-                <div>
-                  <small class="nowrap">Y Axis</small>
-                </div>
-                <select
-                  name="select-y-axis"
-                  class="btn active vis-control"
-                  id="select-y-axis"
-                  style="width: 40%; margin-left: 57.5%;"
-                >
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="100"
-                    value="select"
-                    selected="selected"
-                  >
-                    Select
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="100"
-                    value="popularity"
-                  >
-                    POPULARITY
-                  </option>
-                  <option data-scale-type="linear" value="release_year">
-                    YEAR
-                  </option>
-                  <option data-scale-type="linear" value="loudness">
-                    LOUDNESS
-                  </option>
-                  <option data-scale-type="linear" value="duration">
-                    DURATION
-                  </option>
-                  <option data-scale-type="linear" value="tempo">TEMPO</option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="energy"
-                  >
-                    ENERGY
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="danceability"
-                  >
-                    DANCEABILITY
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="valence"
-                  >
-                    POSITIVENESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="acousticness"
-                  >
-                    ACOUSTICNESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="liveness"
-                  >
-                    LIVENESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="instrumentalness"
-                  >
-                    INSTRUMENTALNESS
-                  </option>
-                  <option
-                    data-scale-type="linear"
-                    data-scale-min="0"
-                    data-scale-max="1"
-                    value="speechiness"
-                  >
-                    SPEECHINESS
-                  </option>
-                  <!-- <option data-scale-type="linear" value="pca2">PCA2</option>	 -->
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="container-row">
-            <div class="cell hide" id="pca-axes-notes">
-              <small
-                ><i
-                  >Turn off "Just cluster similar songs" to enable axes
-                  selection</i
-                ></small
-              >
-            </div>
-          </div>
-
+            
           <div class="grow container-col">
             <!-- <div class="grow container-col" style="padding-bottom: 30px;"> -->
             <!-- <div class="grow" id="radial-view"></div> -->
-            <svg id="radial-view" class="grow" overflow="visible" height="700px" width="700px" style="margin-left:30%; margin-top: -25px"></svg>
+            <!-- <svg id="radial-view" class="grow" overflow="visible" height="700px" width="700px" style="margin-left:30%; margin-top: -25px"></svg> -->
           </div>
           <!-- <div class="" style="padding-top: 20px; padding-bottom: 20px;">
 						Other songs similar to your selection:
 					</div> -->
-        </div>
-        <div class="hidden-lg" style="margin-top: 30px">
-          <small>
-            <i>
-              <b>Try this on a desktop/laptop</b> for full functionality, e.g.,
-              song preview, more controls, song-by-song comparisons, song
-              distributions, & way better overall experience.
-            </i>
-          </small>
         </div>
         <div
           class="drawer-tab vis-control transparent hidden-sm"
@@ -438,9 +239,18 @@
 					</div>-->
         </div>
       </div>
-      <div class="cell container-col collapse-sm sidebar-lg" style="margin-left: 25%; margin-top: 20px; margin-bottom: 100px;" >
+      <div
+        class="cell container-col collapse-sm sidebar-lg"
+        style="margin-left: 25%; margin-top: 20px; margin-bottom: 100px"
+      >
         <h2>Song Feature Distributions</h2>
-        <svg id="histogram-view" class="grow" overflow="visible" width="1000px" height="2000px" ></svg>
+        <svg
+          id="histogram-view"
+          class="grow"
+          overflow="visible"
+          width="1000px"
+          height="2000px"
+        ></svg>
         <!-- <h2>Legend</h2>
 				<div class="panel">
 					<ul>
@@ -449,51 +259,10 @@
 						<li>Image</li>
 					</ul>
 				</div> -->
-    
       </div>
     </div>
 
-    <div id="veil" class="veil hide vis-control"></div>
-
-    <div id="star-view-drawer" class="container-col hide dont-reset-selection">
-      <div
-        id="drop-area"
-        class="cell drawer-tab vis-control clickable hidden-sm"
-      >
-        <!-- <h2>Detailed Analysis</h2> -->
-        <div class="text-center">
-          <i class="fa fa-angle-up" id="expand-icon" style="opacity: 0"></i>
-        </div>
-        <div class="flex-container" style="opacity: 40%;">
-          <div id="starTitleLabel" class="text-center grow">
-            Drag a song here for more details
-          </div>
-          <div id="starClear"></div>
-        </div>
-        <!--<div>
-					2 Songs in Comparison [TODO: show number of songs in comparison]
-				</div>-->
-      </div>
-      <div class="grow">
-        <!--<h2 class="mt-0">Song-by-song Comparison</h2>-->
-        <svg id="star-view" class="grow" overflow="visible"></svg>
-      </div>
-    </div>
-
-    <!-- <div class="help-tooltip hide">
-      <h3 class="help-title">Test Help Tooltip</h3>
-      <p class="help-body">
-        This is a test help message on the help tooltip. This is a test help
-        message on the help tooltip. This is a test help message on the help
-        tooltip.
-      </p>
-    </div>
-
-    <div class="tutorial-tooltip hide" id="tutorial">
-      <div class="speech-bubble">
-        <p>Test Test</p>
-      </div>
-    </div> -->
+    <!-- <div id="veil" class="veil hide vis-control"></div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
     <script src="https://nico-amsterdam.github.io/awesomplete-util/js/awesomplete.min.js"></script>
@@ -503,19 +272,10 @@
 
     <script src="js/popular_artists.js"></script>
     <script src="js/utils.js"></script>
-    <script src="js/audiohelpers.js"></script>
-    <script src="js/helptooltip.js"></script>
-    <script src="js/rectangulargrid.js"></script>
-    <!-- <script src="js/radialgrid.js"></script> -->
-    <!-- <script src="js/radialplot.js"></script> -->
-    <script src="js/radialplot_with_split.js"></script>
     <script src="js/histograms.js"></script>
-    <script src="js/starplots.js"></script>
-    <!-- <script src="js/tutorial.js"></script> -->
+
 
     <script>
-      var ENABLE_TUTORIAL = false;
-      var ENABLE_ALL_TUTORIALS = false;
 
       var components = [];
       var data = [];
@@ -523,11 +283,6 @@
       var dispatch = d3.dispatch("filter", "highlight");
 
       var SongInStarPlot = false;
-
-      var rv;
-      components.push(
-        (rv = new RadialView(d3.select("svg#radial-view"), [], dispatch))
-      );
       components.push(
         new HistogramView(d3.select("svg#histogram-view"), [], dispatch)
       );
@@ -547,220 +302,8 @@
         });
       });
 
-      window.addEventListener("resize", function () {
-        components.forEach(function (c) {
-          c.onScreenSizeChanged();
-        });
-      });
-
-      d3.select(".bookmark-page").on("click.bookmark", function (e) {
-        d3.event.preventDefault();
-        if (window.sidebar && window.sidebar.addPanel) {
-          // Firefox <23
-
-          window.sidebar.addPanel(document.title, window.location.href, "");
-        } else if (window.external && "AddFavorite" in window.external) {
-          // Internet Explorer
-
-          window.external.AddFavorite(location.href, document.title);
-        } else if (
-          (window.opera && window.print) ||
-          (window.sidebar && !(window.sidebar instanceof Node))
-        ) {
-          // Opera <15 and Firefox >23
-          /**
-           * For Firefox <23 and Opera <15, no need for JS to add to bookmarks
-           * The only thing needed is a `title` and a `rel="sidebar"`
-           * To ensure that the bookmarked URL doesn't have a complementary `#` from our trigger's href
-           * we force the current URL
-           */
-          triggerBookmark
-            .attr("rel", "sidebar")
-            .attr("title", document.title)
-            .attr("href", window.location.href);
-          return true;
-        } else {
-          // For the other browsers (mainly WebKit) we use a simple alert to inform users that they can add to bookmarks with ctrl+D/cmd+D
-
-          alert(
-            "You can add this page to your bookmarks by pressing " +
-              (navigator.userAgent.toLowerCase().indexOf("mac") != -1
-                ? "Command/Cmd"
-                : "CTRL") +
-              " + D on your keyboard."
-          );
-        }
-        // If you have something in the `href` of your trigger
-        return false;
-      });
-
-      d3.select("#tutorial-landing").on("click.tutorial", function () {
-        if (ENABLE_TUTORIAL) {
-          callTutorial(
-            "#search-artist",
-            "Try adding your favorite artist<br>to the comparison here!"
-          );
-          if (urlParams.getAll("q").length <= 0) {
-            // pull random comparison
-            callTutorial(
-              "#search-artist",
-              "Here are some random artists to help get<br>you started. Now try adding your own<br>favorite artists to the comparison here!"
-            );
-          }
-        }
-        d3.select("#search-artist").node().focus();
-      });
-
-      d3.selectAll(".overlay-popup").on("click", function () {
-        d3.select(this).classed("hide", true);
-      });
-
-      d3.select("#toggle-tutorial-overlay").on("click", function () {
-        d3.select("#tutorial-popup").classed("hide", false);
-      });
-
-      // UI initialization from vis's config
-      let rvConfig = rv.getConfig();
-      d3.select("[name=select-x-axis]").property(
-        "value",
-        rvConfig.xMapping.key
-      );
-      d3.select("[name=select-y-axis]").property(
-        "value",
-        rvConfig.yMapping.key
-      );
-      d3.select("#toggle-split-view").property("checked", rvConfig.isSplitting);
-      d3.select("#toggle-album-art").property("checked", rvConfig.showAlbumArt);
-      d3.select("#toggle-force").property("checked", rvConfig.enableForce);
-      d3.select("[name=radio-pca]").property("value", rvConfig.isPca);
-      d3.select("#toggle-pca").property("checked", rvConfig.isPca);
-      // document.getElementById('radio-pca').checked = rvConfig.isPca;
-      // document.getElementById('toggle-pca').checked = rvConfig.isPca;
-      updateSplitViewToggle();
-
-      function updateSplitViewToggle() {
-        let splitViewToggle = d3.select("#toggle-split-view");
-        let splitViewParent = d3.select(splitViewToggle.node().parentNode);
-        if (data.length > 1) {
-          splitViewToggle.attr("disabled", null);
-          splitViewParent.classed("disabled", false);
-        } else {
-          splitViewToggle.attr("disabled", "disabled");
-          splitViewParent.classed("disabled", true);
-        }
-      }
-
-      // UI events
-      d3.selectAll("[name=radio-pca], #toggle-pca")
-        // d3.selectAll('#toggle-pca')
-        .on("change", function () {
-          console.log(this.getAttribute("type"));
-          let isChecked =
-            this.getAttribute("type") == "checkbox"
-              ? this.checked
-              : this.value == "mode-pca";
-          // console.log(this.checked)
-          if (isChecked) {
-            rv.setConfig({
-              xMapping: {
-                key: "pca1",
-                scaleType: "linear",
-                minOverride: false,
-                maxOverride: false,
-                isRadial: false,
-              },
-              yMapping: {
-                key: "pca2",
-                scaleType: "linear",
-                minOverride: false,
-                maxOverride: false,
-                isRadial: false,
-              },
-              showAxes: false,
-            });
-            d3.select("[name=select-x-axis]").attr("disabled", "disabled");
-            d3.select("[name=select-y-axis]").attr("disabled", "disabled");
-            d3.select("#pca-axes-notes").classed("hide", false);
-          } else {
-            let xSelect = d3.select("[name=select-x-axis]").node();
-            let ySelect = d3.select("[name=select-y-axis]").node();
-            let xSelectedOption = xSelect.options[xSelect.selectedIndex];
-            let ySelectedOption = ySelect.options[ySelect.selectedIndex];
-            rv.setConfig({
-              xMapping: {
-                key: xSelectedOption.value,
-                scaleType: xSelectedOption.getAttribute("data-scale-type"),
-                minOverride:
-                  xSelectedOption.getAttribute("data-scale-min") || false,
-                maxOverride:
-                  xSelectedOption.getAttribute("data-scale-max") || false,
-                isRadial: xSelectedOption.getAttribute("data-radial") || false,
-              },
-              yMapping: {
-                key: ySelectedOption.value,
-                scaleType: ySelectedOption.getAttribute("data-scale-type"),
-                minOverride:
-                  ySelectedOption.getAttribute("data-scale-min") || false,
-                maxOverride:
-                  ySelectedOption.getAttribute("data-scale-max") || false,
-                isRadial: ySelectedOption.getAttribute("data-radial") || false,
-              },
-              showAxes: true,
-            });
-            d3.select("[name=select-x-axis]").attr("disabled", null);
-            d3.select("[name=select-y-axis]").attr("disabled", null);
-            d3.select("#pca-axes-notes").classed("hide", true);
-          }
-        });
-
-      d3.selectAll("#toggle-split-view").on("change", function (e) {
-        rv.setConfig({ isSplitting: this.checked });
-      });
-
-      d3.selectAll("#toggle-album-art").on("change", function (e) {
-        rv.setConfig({ showAlbumArt: this.checked });
-      });
-
-      d3.selectAll("#toggle-force").on("change", function (e) {
-        rv.setConfig({ enableForce: this.checked });
-      });
-
-      d3.selectAll("[name=select-x-axis]").on("change", function () {
-        let selectedOption = this.options[this.selectedIndex];
-        rv.setConfig({
-          xMapping: {
-            key: selectedOption.value,
-            scaleType: selectedOption.getAttribute("data-scale-type"),
-            minOverride: selectedOption.getAttribute("data-scale-min") || false,
-            maxOverride: selectedOption.getAttribute("data-scale-max") || false,
-            isRadial: selectedOption.getAttribute("data-radial") || false,
-          },
-        });
-        if (ENABLE_TUTORIAL)
-          callTutorial(
-            "#options-panel",
-            "You can also try adjusting<br>more options here.",
-            "n"
-          );
-      });
-      d3.selectAll("[name=select-y-axis]").on("change", function () {
-        let selectedOption = this.options[this.selectedIndex];
-        rv.setConfig({
-          yMapping: {
-            key: selectedOption.value,
-            scaleType: selectedOption.getAttribute("data-scale-type"),
-            minOverride: selectedOption.getAttribute("data-scale-min") || false,
-            maxOverride: selectedOption.getAttribute("data-scale-max") || false,
-            isRadial: selectedOption.getAttribute("data-radial") || false,
-          },
-        });
-        if (ENABLE_TUTORIAL)
-          callTutorial(
-            "#options-panel",
-            "You can also try adjusting<br>more options here.",
-            "n"
-          );
-      });
+      //--------------------------------------------------------------------------------------// UI events-------------------------------------------------------------------------------------------------------------
+      // 
       d3.selectAll("#search-highlight")
         .on("keyup", function () {
           dispatch.call("highlight", this, (k) =>
@@ -780,89 +323,7 @@
           );
         });
 
-      d3.select("#star-view-drawer .drawer-tab").on(
-        "click",
-        function (e) {
-          let drawer = this.parentNode;
-          // console.log("Songinstarplot", SongInStarPlot);
-          if (SongInStarPlot) {
-            console.log("Songinstarplot", SongInStarPlot);
-            d3.select(drawer).classed(
-              "hide",
-              !d3.select(drawer).classed("hide")
-            );
-            document.getElementById("expand-icon").style.opacity = 1;
-            if (d3.select(drawer).classed("hide")) {
-              document
-                .getElementById("expand-icon")
-                .classList.remove("fa-angle-down");
-              document
-                .getElementById("expand-icon")
-                .classList.add("fa-angle-up");
-            } else {
-              document
-                .getElementById("expand-icon")
-                .classList.remove("fa-angle-up");
-              document
-                .getElementById("expand-icon")
-                .classList.add("fa-angle-down");
-            }
-          } else {
-            document.getElementById("expand-icon").style.opacity = 0;
-          }
-
-          // console.log("drawer", d3.select(drawer).classed('hide'));
-
-          d3.select("#veil").classed("hide", d3.select(drawer).classed("hide"));
-        },
-        false
-      );
-      d3.select("#starClear").on("click", function () {
-        console.log("removeAll");
-        document.getElementById("star-view-drawer").classList.remove("show");
-        document.getElementById("star-view-drawer").classList.add("hide");
-        // d3.select('#star-view-drawer').classed('hide', true);
-        new StarView(d3.select("svg#star-view"), [], dispatch).onDataChanged();
-      });
-
-      d3.select("#veil").on("click", function () {
-        d3.select("#star-view-drawer").classed("hide", true);
-        d3.select("#veil").classed("hide", true);
-        document
-          .getElementById("expand-icon")
-          .classList.remove("fa-angle-down");
-        document.getElementById("expand-icon").classList.add("fa-angle-up");
-      });
-
-      // d3.selectAll('#star-view-drawer .drawer-tab')
-      // 	.data([{}])
-      // 	.call(d3.drag()
-      // 		.on('start', function(d) {
-      // 			d.startX = d3.event.x;
-      // 			d.startY = d3.event.y;
-      // 		})
-      // 		.on('drag', function (d) {
-      // 			console.log(d.startY, d3.event.y);
-      // 			this.parentNode.style.bottom = (d.startY - d3.event.y) + 'px';
-      // 		})
-      // 		.on('end', function () {
-      // 			console.log(this.parentNode.style.bottom);
-      // 			let offsetBottom = parseInt(this.parentNode.style.bottom, 10);
-      // 			if (offsetBottom > -80) {
-      // 				d3.select(this.parentNode)
-      // 					.transition()
-      // 					.style('bottom', '');
-      // 				this.parentNode.classList.remove('hide');
-      // 			} else {
-      // 				d3.select(this.parentNode)
-      // 					.transition()
-      // 					.style('bottom', '');
-      // 				this.parentNode.classList.add('hide');
-      // 			}
-      // 		})
-      // 	)
-
-      // Searchbar
+      //--------------------------------------------------------------------- Searchbar---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
       AwesompleteUtil.start(
         "#search-artist",
         {
@@ -953,11 +414,6 @@
                 "VINYL - " + data.map((d) => d.name).join(" v "),
                 "?" + data.map((d) => "q=" + d.id).join("&")
               );
-              if (ENABLE_TUTORIAL)
-                callTutorial(
-                  "#select-axes",
-                  "Try changing the axes here to see other attributes."
-                );
             });
         });
 
