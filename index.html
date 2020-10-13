@@ -12,11 +12,9 @@
     />
     <link rel="stylesheet" href="css/grids.css" />
     <link rel="stylesheet" href="css/histograms.css" />
-    <link rel="stylesheet" href="css/radialplot.css" />
-    <link rel="stylesheet" href="css/starplot.css" />
     <link rel="stylesheet" href="css/main.css" />
 
-    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> -->
+  
 
     <script
       src="https://kit.fontawesome.com/45bc1cc8f8.js"
@@ -37,27 +35,8 @@
 
       gtag("config", "UA-154213807-1");
     </script>
-    <!-- 
-    <meta property="og:title" content="VINYL" />
-    <meta
-      property="og:description"
-      content="Comparing Music Artists through Visualization"
-    />
-    <meta property="og:url" content="https://kenziemurphy.github.io/vinyl/" />
-    <meta
-      property="og:image"
-      content="https://kenziemurphy.github.io/vinyl/img/og-image.png"
-    />
-    <meta name="twitter:card" content="summary_large_image" /> -->
   </head>
   <body style="background-image: url(bg.png); overflow-x: hidden">
-    <!-- TODO remove inline CSS -->
-    <!-- <div id="tutorial-landing" class="overlay-popup full-page">
-			<img src="img/tutorial_landing.png" style="width: 60%; max-width: 800px;">
-		</div> -->
-    <!-- <div id="tutorial-popup" class="overlay-popup full-page hide">
-			<img src="img/tutorial_popup.png" style="width: 100%; max-width: 100%;">
-		</div> -->
     <div class="container-main container-row container-col-sm">
       <div class="cell container-col sidebar-lg">
         <div class="hidden-sm">
@@ -70,7 +49,6 @@
           <i><b>VizSong</b></i> - Comparing Music Artists through Vis
         </div>
         <div class="grow">
-          <!-- <h2>I'm interested in...</h2> -->
           <input
             class="form-control"
             id="search-artist"
@@ -79,9 +57,6 @@
             placeholder="Search for an artist..."
           />
           <div id="artist-buttons">
-            <!--<div class="artist-btn">Muse<button>&times;</button></div>
-						<div class="artist-btn">Radiohead<button>&times;</button></div>
-						<div class="artist-btn">Slot Machine<button>&times;</button></div>-->
           </div>
           <div class="text-center text-muted" style="line-height: 1">
             <i
@@ -109,20 +84,6 @@
                   />
                 </div>
               </div>
-
-              <!-- </div> -->
-              <!-- <div class="container-row">
-							<div class="grow margin-gutter" style="width: 33.33%">
-								<button id="toggle-split-view" class="btn vis-control">Toggle&shy; split view</button>
-							</div>
-							<div class="grow margin-gutter" style="width: 33.33%">
-								<button id="toggle-album-art" class="btn vis-control">Toggle&shy;  album art</button>
-							</div>
-							<div class="grow margin-gutter" style="width: 33.33%">
-								<button id="toggle-force" class="btn vis-control">Toggle&shy;  force jittering</button>
-							</div>
-						</div> -->
-              <!-- <div class="container-col"> -->
               <div class="grow container-row mb-xs">
                 <div class="grow"></div>
                 <label class="switch vis-control">
@@ -182,7 +143,6 @@
               </div>
             </div>
           </div>
-          <!-- <h2>About the Data</h2> -->
         </div>
       </div>
       <div class="cell grow container-col central-column">
@@ -195,48 +155,9 @@
             id="select-axes"
             style="margin-top: -400px; margin-left: 50%; width: 50%"
           >
-            <!-- <div class="cell grow mb-xs" style="margin-bottom: 10px;">
-							<div>
-								<small class="nowrap">Position data points by</small>
-							</div>
-							<div class="container-row">
-								<div class="radio grow">
-									<input type="radio" id="radio-pca-on" name="radio-pca" value="mode-pca">
-									<label for="radio-pca-on" class="btn btn-block text-center add-help nowrap clickable" data-help-key="mode-pca"><small>Group by Similarity</small> </label>
-								</div>
-								<div class="grow radio">
-									<input type="radio" id="radio-pca-off" name="radio-pca" value="mode-value" checked>
-									<label for="radio-pca-off" class="btn btn-block text-center add-help nowrap clickable" data-help-key="mode-value"><small>Plot by Value</small> </label>
-								</div>
-							</div>
-						</div> -->
             
           <div class="grow container-col">
-            <!-- <div class="grow container-col" style="padding-bottom: 30px;"> -->
-            <!-- <div class="grow" id="radial-view"></div> -->
-            <!-- <svg id="radial-view" class="grow" overflow="visible" height="700px" width="700px" style="margin-left:30%; margin-top: -25px"></svg> -->
           </div>
-          <!-- <div class="" style="padding-top: 20px; padding-bottom: 20px;">
-						Other songs similar to your selection:
-					</div> -->
-        </div>
-        <div
-          class="drawer-tab vis-control transparent hidden-sm"
-          style="font-size: 10pt; margin-top: 10px"
-        >
-          <!-- <h2>Detailed Analysis</h2> -->
-          <div class="text-center">
-            <i class="fa fa-angle-up" style="opacity: 0"></i>
-          </div>
-          <div class="flex-container">
-            <div class="text-center grow">
-              Drag a song here for more details
-            </div>
-            <div></div>
-          </div>
-          <!--<div>
-						2 Songs in Comparison [TODO: show number of songs in comparison]
-					</div>-->
         </div>
       </div>
       <div
@@ -251,25 +172,14 @@
           width="1000px"
           height="2000px"
         ></svg>
-        <!-- <h2>Legend</h2>
-				<div class="panel">
-					<ul>
-						<li>Size</li>
-						<li>Shape</li>
-						<li>Image</li>
-					</ul>
-				</div> -->
       </div>
     </div>
-
-    <!-- <div id="veil" class="veil hide vis-control"></div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
     <script src="https://nico-amsterdam.github.io/awesomplete-util/js/awesomplete.min.js"></script>
     <script src="https://nico-amsterdam.github.io/awesomplete-util/js/awesomplete-util.min.js"></script>
     <script src="https://unpkg.com/d3-simple-slider"></script>
     <script src="js/lib/pca.min.js"></script>
-
     <script src="js/popular_artists.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/histograms.js"></script>
@@ -282,14 +192,9 @@
 
       var dispatch = d3.dispatch("filter", "highlight");
 
-      var SongInStarPlot = false;
       components.push(
         new HistogramView(d3.select("svg#histogram-view"), [], dispatch)
       );
-      // components.push(new StarView(d3.select('svg#star-view'), [], dispatch));
-
-      // Load data and call onDataChanged for components once load is complete
-
       dispatch.on("filter", function (filterFunc) {
         components.forEach(function (c) {
           c.onFilter(filterFunc);
@@ -364,7 +269,6 @@
         artistsExit.forEach(removeArtistDataById);
       };
 
-      // Promise.all(urlParams.getAll('q').map(d => loadArtistData(d))).then(() => {console.log('!!!')});
       applyPromise(urlParams.getAll("q"), loadArtistData).then(function (e) {
         return Promise.all(e.map(appendArtistData));
       });
@@ -393,14 +297,13 @@
         });
       }
 
-      // Listen to searchbar selection
+
       document
         .getElementById("search-artist")
         .addEventListener("awesomplete-selectcomplete", function (event) {
           // Clear the searchbar to be ready for a new search
           document.getElementById("search-artist").value = "";
 
-          // Retrieve songs for this artist from our API
           var artistID = event.text.value.id;
           var artistName = event.text.value.name;
           //console.log(artistID);
@@ -419,7 +322,7 @@
 
       // helpers
       function preprocessData(data) {
-        // TODO: try to remove duplicate data
+
 
         console.log(data.length);
         // remove duplicates
@@ -458,18 +361,13 @@
         });
       }
 
-      // NOTE arrayJoin was moved to utils.js
-
-      // Loads an array of song data for the given artistID and append that to our dataset
       function loadArtistData(artistID, artistName) {
-        // draw loading button <i class="fas fa-circle-notch fa-spin"></i>
         d3.select("#artist-buttons")
           .insert("div", ":first-child")
           .attr("id", "loading-artist-button")
           .attr("class", "artist-btn")
           .html("<i class='fas fa-circle-notch fa-spin'></i> Loading...");
 
-        //console.log('loading artist', artistID)
 
         if (artistID.indexOf("spotify:artist:") >= 0)
           artistID = artistID.substring("spotify:artist:".length);
@@ -481,37 +379,25 @@
           artistName;
 
         return new Promise(function (resolve, reject) {
-          return d3.json(url).then(resolve); //.then()//.catch((error) => console.error(error));
+          return d3.json(url).then(resolve);
         });
       }
 
       function appendArtistData(loadedData) {
-        // remove loading button
         d3.select("#loading-artist-button").remove();
 
         return new Promise(function (resolve, reject) {
           preprocessData(loadedData.songs);
           console.log("preprocessed", loadedData);
-          // console.log(loadedData);
 
-          // Append to data array
           data.push(loadedData);
 
-          // redraw artist buttons
           drawArtistButtons();
 
-          // trigger a data change for the histograms
           components.forEach(function (c) {
             c.onDataChanged(data);
           });
           resolve();
-
-          updateSplitViewToggle();
-
-          // if (ENABLE_TUTORIAL && data.length == 2) {
-          // 	// callTutorial('#options-panel', 'Now try adjusting the visualization here!')
-          // 	callTutorial('[name=select-x-axis]', 'Now try changing the axes here to see other attributes.')
-          // }
 
           if (data.length >= 4) {
             d3.select("#search-artist").attr("disabled", "disabled");
@@ -528,9 +414,6 @@
 
         // redraw artist buttons
         drawArtistButtons();
-
-        // enable/disable split view toggle based on if there're more than one artist loaded
-        updateSplitViewToggle();
 
         // trigger a data change for the histograms
         components.forEach(function (c) {

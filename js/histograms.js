@@ -55,17 +55,15 @@ class HistogramView {
             }
             })
             .on("brush", function (histogram) {
-                        // Get the extent or bounding box of the brush event, this is a 2x2 array
+                        
                 var e = d3.event.selection;
-                clearTutorial();
+                // clearTutorial();
 
                 d3.selectAll('.selection').style("opacity", 1);
 
                 let indexes = [];
                 let ids = [];
                 let _THIS = this;
-                //console.log("HISTOGRAM");
-                //console.log(this);
 
                 let histID = this['id'];
 
@@ -73,50 +71,6 @@ class HistogramView {
                 if(e) {
 
                     let tempArray = [];
-                    // Select all .bin-rect, and add the "fade" class if the data for that circle
-                    // lies outside of the brush-filter applied for this rectangle x and y attributes
-                    // d3.selectAll('#' + histID + ' .bin-rect')
-                    //  .classed("", function(d){
-                    //     if (+d3.select(this).attr("x") > e[0] && +d3.select(this).attr("x") + +d3.select(this).attr("width") < e[1]) {
-                    //         indexes.push(this);
-
-
-                    //         /* we gave each artist g an id in drawHistogram, use this to determine what artist this rectangle belongs to
-                    //         and therefore what key to look at in d.data (i.e. ids0 or ids1 or ids2 etc) to find the songs in this bin */
-                    //         let artistIndex = this.parentNode.id.slice(-1);
-
-                    //         // get the Spotify id of the collection (artist)
-                    //         let collectionId = _this.data[artistIndex].id;
-
-                    //         // get a list of the id's in this bin
-                    //         _this.idsInBinBrush = _this.idsInBinBrush.concat(d.data["ids" + artistIndex]); //_this.getAllIdsInBin(d);
-
-                    //         // send a filtering function out to the other components to highlight the id's in this bin everywhere
-                    //         _this.dispatch.call('highlight', this, (k) => _this.idsInBinBrush.includes(k.id));
-                    //         // console.log(_this.idsInBinBrush)
-                    //     } else {
-
-                    //         /* we gave each artist g an id in drawHistogram, use this to determine what artist this rectangle belongs to
-                    //         and therefore what key to look at in d.data (i.e. ids0 or ids1 or ids2 etc) to find the songs in this bin */
-                    //         let artistIndex = this.parentNode.id.slice(-1);
-
-                    //         // get the Spotify id of the collection (artist)
-                    //         let collectionId = _this.data[artistIndex].id;
-
-                    //         let idsToDelete= d.data["ids" + artistIndex];
-
-                    //         _this.idsInBinBrush = _this.idsInBinBrush.filter(function(id) {
-                    //             if(idsToDelete.includes(id)) {
-                    //                 return false;
-                    //             }
-                    //             return true;
-                    //         });
-
-                    //         _this.dispatch.call('highlight', this, (k) => _this.idsInBinBrush.includes(k.id));
-
-                    //     }
-                    //     // console.log("INDEXES");
-                    // })
 
                     let binsToHighlight = d3.selectAll('#' + histID + ' .bin-rect').filter(function (d) {
                         return +d3.select(this).attr("x") > e[0] && +d3.select(this).attr("x") + +d3.select(this).attr("width") < e[1]
@@ -244,10 +198,10 @@ class HistogramView {
     .range(range);
 
     // used for forcing x axis ticks to have specific values
-    let numTicks = 1; // <--- Adjust this value to force a different number of ticks on the axis
+    let numTicks = 10; // <--- Adjust this value to force a different number of ticks on the axis
     let start = this.x.domain()[0];
     let end = this.x.domain()[1];
-    let step = (this.x.domain()[1] - this.x.domain()[0])/numTicks;
+    let step = (this.x.domain()[1] - this.x.domain()[0])/(numTicks);
 
     let xAxis = (g) => g
     .attr('class', 'x_axis')
@@ -462,7 +416,7 @@ class HistogramView {
           .range(this.range);
 
           // used for forcing x axis ticks to have specific values
-          this.numTicks = 1; // <--- Adjust this value to force a different number of ticks on the axis
+          this.numTicks = 20; // <--- Adjust this value to force a different number of ticks on the axis
           this.start = this.x.domain()[0];
           this.end = this.x.domain()[1];
           this.step = (this.x.domain()[1] - this.x.domain()[0])/this.numTicks;
@@ -529,23 +483,14 @@ class HistogramView {
 
     onHighlight(filterFunction) {
         let _this = this;
-        // console.log("IMPORTANT")
-        // console.log(_this.brush)
+
         this.highlight = filterFunction;
-        //console.log(filterFunction);
-        // if ( this.highlight({k: -1}) === true) {
-        //     console.log("REMOVE SELECTION", this.highlight);
-        // //d3.selectAll(".selection").call(_this.brush.move, null);
-        // //d3.selectAll(".brush").call(_this.brush.clear());
-        //   // d3.select('.selection').remove();
-        // }
+
 
 
         d3.selectAll('.bin-rect')
             .classed('fade', function(d) {
 
-                /* we gave each artist g an id in drawHistogram, use this to determine what artist this rectangle belongs to
-                    and therefore what key to look at in d.data (i.e. ids0 or ids1 or ids2 etc) to find the songs in this bin */
                 let artistIndex = this.parentNode.id.slice(-1);
 
                 // get the Spotify id of the collection (artist)
@@ -554,21 +499,10 @@ class HistogramView {
                 // get a list of the id's in this bin
                 let idsInBin = d.data["ids" + artistIndex]; //_this.getAllIdsInBin(d);
 
-
-
-                 /* The filtering function typically has format (d) => d.id == s.id where s.id is the magical song id we want to highlight.
-                    Or (d) => d.collection_id == s.id where s.id is the id of a collection we want to highlight all the songs of
-                    Get our id's array from the format [id1, id2, ...] into [{id: id1, collection_id: cid1}, {id: id2, collection_id: cid2}, ...]
-                    so those filtering functions can operate on it.
-                */
                 idsInBin = idsInBin.map((d) => {
                     return {"id": d, collection_id: collectionId};
                 });
 
-
-
-                /* check if the filter function evaluates true for at least one id in this bin, i.e. if one id in this bin needs to be highlighted,
-                then highlight the whole bin */
                 for(let id of idsInBin) {
                     if(_this.highlight(id)) {
                         return false;
@@ -579,6 +513,5 @@ class HistogramView {
                 return true;
             });
 
-        // console.log('onHighlight');
     }
 }

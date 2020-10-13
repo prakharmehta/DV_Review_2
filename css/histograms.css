@@ -20,6 +20,6 @@
   transition: opacity 0.2s;
 }
 
-.faded {
+.fade {
     opacity: 0.4;
 }
